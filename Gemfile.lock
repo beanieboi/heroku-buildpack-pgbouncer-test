@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     nio4r (2.5.2)
+    pg (1.2.3)
     puma (4.3.3)
       nio4r (~> 2.0)
     rack (1.6.12)
@@ -18,9 +19,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  pg
   puma
   sequel
   sinatra
+
+RUBY VERSION
+   ruby 2.7.0p0
 
 BUNDLED WITH
    2.1.2
