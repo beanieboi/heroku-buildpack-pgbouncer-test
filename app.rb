@@ -18,6 +18,13 @@ unless DB.table_exists?(:items)
   items.insert(name: 'ghi', price: rand * 100)
 end
 
-get '/' do
+get '/items' do
   JSON.dump(DB[:items].all)
+end
+
+get '/dbsettings' do
+  u = URI.parse(ENV['DATABASE_URL'])
+  JSON.dump(
+    { host: u.host}
+  )
 end
