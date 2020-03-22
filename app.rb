@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sequel'
 require 'pg'
+require 'json'
 
 DB = Sequel.connect(ENV['DATABASE_URL'])
 
@@ -18,5 +19,5 @@ unless DB.table_exists?(:items)
 end
 
 get '/' do
-  "Hello World!"
+  JSON.dump(DB[:items].all)
 end
