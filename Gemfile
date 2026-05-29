@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.7.0'
+ruby file: '.ruby-version'
 
-gem 'sinatra'
-gem 'sequel'
-gem 'puma'
 gem 'pg'
+gem 'puma'
+gem 'sequel'
+gem 'sinatra'
